@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Link Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #1a1a1a;
+            margin: 0;
+            color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #2c2c2c;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        h2 {
+            margin: 0;
+            color: #00ccff;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 16px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background: #3c3c3c;
+            color: #f4f4f4;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #00ccff;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #00ccff;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔒 Phishing Link Detector</h1>
+        <p>Protect yourself from online threats!</p>
+    </header>
+    
+    <div class="container">
+        <h2>🎯 Check a URL</h2>
+        <p>Enter any link below to check if it's a phishing website.</p>
+        <form method="POST">
+            <input type="text" name="url" placeholder="https://example.com" required>
+            <button type="submit">Check URL</button>
+        </form>
+        <h3>{{ result }}</h3>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Phishing Link Detector. All rights reserved.</p>
+    </footer>
+</body>
+</html>
